@@ -1,18 +1,20 @@
 {
-  "name": "node-js-getting-started",
+  "name": "rtsprelay",
   "version": "0.3.0",
-  "description": "A sample Node.js app using Express 4",
+  "description": "A node.js app using Express",
   "engines": {
     "node": "14.x"
   },
-  "main": "index.js",
+  "main": "app.js",
+  "type": "module",
   "scripts": {
-    "start": "node index.js",
+    "start": "node app.js",
     "test": "node test.js"
   },
   "dependencies": {
     "ejs": "^3.1.5",
-    "express": "^4.15.2"
+    "express": "^4.15.2",
+	"rtsp-relay": "^1.8.0"
   },
   "devDependencies": {
     "got": "^11.3.0",
@@ -20,12 +22,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/heroku/node-js-getting-started"
+    "url": "https://github.com/Markbulg/rtsprelay"
   },
   "keywords": [
     "node",
-    "heroku",
-    "express"
+    "express",
+	"rtsprelay"
   ],
   "license": "MIT"
 }
