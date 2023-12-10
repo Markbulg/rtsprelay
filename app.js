@@ -1,7 +1,7 @@
 import express   from 'express';
 import rtspRelay from 'rtsp-relay';
 
-const port = process.env.PORT || 8091;
+const port = process.env.PORT || 3000;
 
 const app = express()
 ,     { proxy, scriptUrl } = rtspRelay(app);
