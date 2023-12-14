@@ -1,7 +1,7 @@
 import express   from 'express';
 import rtspRelay from 'rtsp-relay';
 
-const port = process.env.PORT || 3000;
+const port = 3000;
 
 const app = express()
 ,     { proxy, scriptUrl } = rtspRelay(app);
@@ -20,6 +20,8 @@ app.get('/', (req, res) =>
 
         <script src='${scriptUrl}'></script>
         <script>
+		    console.log('location.host: ', location.host);
+			
             loadPlayer({
                 url: 'wss://' + location.host + '/api/stream',
                 canvas: document.getElementById('canvas')
